@@ -4,6 +4,12 @@ export interface Props {
 }
 
 const { name } = Astro.props
+const url = Astro.url.pathname
+
+const isOnPath = url.localeCompare(`/${name}`) == 0 
+const isHome = url.endsWith('/')
 ---
 
 <a href={name == 'home' ? '/' : name} class="btn">{name}</a>
+<p>{name == 'home' ? isHome : null}</p>
+<p>{isOnPath}</p>
