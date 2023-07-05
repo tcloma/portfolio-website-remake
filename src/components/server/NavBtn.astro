@@ -7,15 +7,17 @@ const { name } = Astro.props
 const url = Astro.url.pathname
 
 function isOnPathName() {
-    if (url.endsWith('/')) {
-        return name == 'home'
-    } else {
-        return url.localeCompare(`/${name}`) == 0 
-    }
-    
+	if (url.endsWith('/')) {
+		return name == 'home'
+	} else {
+		return url.localeCompare(`/${name}`) == 0
+	}
 }
-
 ---
 
-<a href={name == 'home' ? '/' : name} class="btn rounded-md bg-black text-white border-none">{name}</a>
-<p>{isOnPathName()}</p>
+<a
+	href={name == 'home' ? '/' : name}
+	class={isOnPathName()
+		? 'btn bg-black text-white border-none'
+		: 'btn bg-transparent border-none hover:bg-gray-200'}>{name}</a
+>
