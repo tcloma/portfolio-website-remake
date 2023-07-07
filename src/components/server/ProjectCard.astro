@@ -1,0 +1,31 @@
+---
+import LinkBtn from '../client/LinkBtn'
+
+export interface Props {
+	name: string
+	technologies: string[]
+	githubUrl: string
+}
+
+const { name, githubUrl, technologies } = Astro.props
+---
+
+<div
+	class="grid min-h-[20rem] w-full place-items-center rounded-xl border-2 shadow-md"
+>
+	<span class="text-2xl font-bold text-gray-600">Image</span>
+</div>
+
+<div class="flex w-[99%] rounded-bl-xl rounded-br-xl bg-gray-100">
+	<p class="flex w-1/4 items-center justify-center text-lg font-bold">
+		{name}
+	</p>
+	<!-- <div class="divider divider-horizontal"></div> -->
+	<div class="flex w-1/2 items-center justify-center border-l-2 border-r-2">
+		{technologies.map((tech) => `${tech}, `)}
+	</div>
+	<!-- <div class="divider divider-horizontal"></div> -->
+	<div class="flex w-1/4 items-center justify-center">
+		<LinkBtn client:visible name="GitHub" link={githubUrl} />
+	</div>
+</div>

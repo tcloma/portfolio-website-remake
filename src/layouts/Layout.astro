@@ -1,5 +1,5 @@
 ---
-import About from '../components/server/About.astro';
+import About from '../components/server/About.astro'
 import NavBar from '../components/server/NavBar.astro'
 export interface Props {
 	title: string
@@ -24,15 +24,16 @@ const { title } = Astro.props
 			class="grid h-[90vh] w-[95vw] grid-cols-3 rounded-2xl bg-white px-10 py-8 shadow-xl"
 		>
 			<div class="border-r-[1.5px] border-dotted border-gray-300">
-                <About />
-            </div>
-			<div class="col-span-2 relative">
-                <NavBar />
+				<About />
+			</div>
+			<div class="relative col-span-2 overflow-hidden">
+				<NavBar />
 				<slot />
 			</div>
 		</section>
 	</body>
 </html>
+
 <style is:global>
 	html {
 		font-family: system-ui, sans-serif;
