@@ -4,10 +4,15 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Projects">
-	<div class="h-full overflow-scroll p-4 pt-16 flex items-center flex-col">
+	<div class="h-full overflow-scroll p-4 pt-16 flex items-center flex-col gap-9">
 		<ProjectCard
 			name="Hover Note"
-			technologies={['React', 'TypeScript', 'Electron']}
+			technologies={['react', 'nodejs','language-typescript', 'electron-framework']}
+			githubUrl="https://github.com/tcloma"
+		/>
+		<ProjectCard
+			name="Flypto Crypto"
+			technologies={['react','language-javascript','language-ruby' ,'language-ruby-on-rails']}
 			githubUrl="https://github.com/tcloma"
 		/>
 	</div>
