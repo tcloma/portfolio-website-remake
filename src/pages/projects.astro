@@ -1,19 +1,55 @@
 ---
 import ProjectCard from '../components/server/ProjectCard.astro'
 import Layout from '../layouts/Layout.astro'
+import HoverPreview from '../assets/hover-preview.png'
+import FlyptoPreview from '../assets/flypto-preview.png'
+import CosmoPreview from '../assets/cosmo-preview.png'
+import KaijuPreview from '../assets/kaijugochi-preview.png'
 ---
 
 <Layout title="Projects">
-	<div class="h-full overflow-scroll p-4 pt-16 flex items-center flex-col gap-9">
+	<div
+		class="flex h-full flex-col items-center gap-9 overflow-scroll py-4 px-[1.25rem] pt-16"
+	>
 		<ProjectCard
 			name="Hover Note"
-			technologies={['react', 'nodejs','language-typescript', 'electron-framework']}
-			githubUrl="https://github.com/tcloma"
+			technologies={[
+				'react',
+				'nodejs',
+				'language-typescript',
+				'electron-framework',
+			]}
+			githubUrl="https://github.com/tcloma/Hover-Note-FIS"
+			src={HoverPreview}
 		/>
 		<ProjectCard
 			name="Flypto Crypto"
-			technologies={['react','language-javascript','language-ruby' ,'language-ruby-on-rails']}
-			githubUrl="https://github.com/tcloma"
+			technologies={[
+				'react',
+				'language-javascript',
+				'language-ruby',
+				'language-ruby-on-rails',
+				'sass',
+			]}
+			githubUrl="https://github.com/tcloma/Flypto-Crypto-FIS"
+			src={FlyptoPreview}
+		/>
+		<ProjectCard
+			name="Cosmo Quizzer"
+			technologies={['react', 'language-javascript', 'firebase', 'sass']}
+			githubUrl="https://github.com/tcloma/Cosmo-Quizzer-FIS"
+			src={CosmoPreview}
+		/>
+		<ProjectCard
+			name="Flypto Crypto"
+			technologies={[
+				'language-javascript',
+				'language-ruby',
+				'language-ruby-on-rails',
+				'sass',
+			]}
+			githubUrl="https://github.com/tcloma/Monster-Game-FIS"
+			src={KaijuPreview}
 		/>
 	</div>
 </Layout>
