@@ -6,11 +6,13 @@ export interface Props {
 const { name } = Astro.props
 const url = Astro.url.pathname
 
+console.log(url.split('/'))
+
 function isOnPathName() {
 	if (url.endsWith('/')) {
 		return name == 'home'
 	} else {
-		return url.localeCompare(`/${name}`) == 0
+		return url.split('/')[1].localeCompare(name) == 0
 	}
 }
 ---

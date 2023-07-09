@@ -8,50 +8,46 @@ import KaijuPreview from '../assets/kaijugochi-preview.png'
 ---
 
 <Layout title="Projects">
-	<div
-		class="flex h-full flex-col items-center gap-9 overflow-scroll py-4 px-[1.25rem] pt-16"
-	>
-		<ProjectCard
-			name="Hover Note"
-			technologies={[
-				'react',
-				'nodejs',
-				'language-typescript',
-				'electron-framework',
-			]}
-			githubUrl="https://github.com/tcloma/Hover-Note-FIS"
-			src={HoverPreview}
-		/>
-		<ProjectCard
-			name="Flypto Crypto"
-			technologies={[
-				'react',
-				'language-javascript',
-				'language-ruby',
-				'language-ruby-on-rails',
-				'sass',
-			]}
-			githubUrl="https://github.com/tcloma/Flypto-Crypto-FIS"
-			src={FlyptoPreview}
-		/>
-		<ProjectCard
-			name="Cosmo Quizzer"
-			technologies={['react', 'language-javascript', 'firebase', 'sass']}
-			githubUrl="https://github.com/tcloma/Cosmo-Quizzer-FIS"
-			src={CosmoPreview}
-		/>
-		<ProjectCard
-			name="Flypto Crypto"
-			technologies={[
-				'language-javascript',
-				'language-ruby',
-				'language-ruby-on-rails',
-				'sass',
-			]}
-			githubUrl="https://github.com/tcloma/Monster-Game-FIS"
-			src={KaijuPreview}
-		/>
-	</div>
+	<ProjectCard
+		name="Hover Note"
+		technologies={[
+			'react',
+			'nodejs',
+			'language-typescript',
+			'electron-framework',
+		]}
+		githubUrl="https://github.com/tcloma/Hover-Note-FIS"
+		src={HoverPreview}
+	/>
+	<ProjectCard
+		name="Flypto Crypto"
+		technologies={[
+			'react',
+			'language-javascript',
+			'language-ruby',
+			'language-ruby-on-rails',
+			'sass',
+		]}
+		githubUrl="https://github.com/tcloma/Flypto-Crypto-FIS"
+		src={FlyptoPreview}
+	/>
+	<ProjectCard
+		name="Cosmo Quizzer"
+		technologies={['react', 'language-javascript', 'firebase', 'sass']}
+		githubUrl="https://github.com/tcloma/Cosmo-Quizzer-FIS"
+		src={CosmoPreview}
+	/>
+	<ProjectCard
+		name="Flypto Crypto"
+		technologies={[
+			'language-javascript',
+			'language-ruby',
+			'language-ruby-on-rails',
+			'sass',
+		]}
+		githubUrl="https://github.com/tcloma/Monster-Game-FIS"
+		src={KaijuPreview}
+	/>
 </Layout>
 
 <style></style>

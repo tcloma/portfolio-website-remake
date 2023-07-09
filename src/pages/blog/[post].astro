@@ -1,0 +1,24 @@
+---
+import { getCollection, getEntry } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog')
+
+	return posts.map((postItem) => ({
+		params: {
+			post: postItem.slug,
+		},
+	}))
+}
+
+const { post } = Astro.params
+const blogPost = await getEntry('blog', post!)
+const { Content } = await blogPost?.render()
+---
+
+<Layout title={post!}>
+	<article class="prose prose-slate w-full">
+		<Content />
+	</article>
+</Layout>

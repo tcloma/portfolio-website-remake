@@ -19,7 +19,6 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body class="grid h-screen place-items-center bg-base-300">
-		<!-- <NavBar /> -->
 		<section
 			class="grid h-[90vh] w-[95vw] grid-cols-3 rounded-2xl bg-base-100 px-10 py-8 shadow-xl"
 		>
@@ -28,11 +27,14 @@ const { title } = Astro.props
 			</div>
 			<div class="relative col-span-2 overflow-hidden">
 				<NavBar />
-				<slot />
+				<div
+					class="flex h-full flex-col items-center gap-9 overflow-scroll px-[1.25rem] py-4 pt-16"
+				>
+					<slot />
+				</div>
 			</div>
 		</section>
 	</body>
 </html>
 
-<style is:global>
-</style>
+<style is:global></style>

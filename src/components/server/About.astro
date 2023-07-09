@@ -1,25 +1,32 @@
-<h1 class="text-3xl font-extrabold text-base-content">Tyrone Cloma</h1>
-<h2 class="mb-8 text-lg text-neutral">Full Stack Developer</h2>
+---
+import LinkBtn from '../client/LinkBtn'
+---
 
-<p class="mb-8 text-base-content">
-	Full Stack Developer with a passion for creating efficient and engaging
-	applications. Experienced in JavaScript with React for creating responsive
-	user interfaces, and Ruby on Rails for producing RESTful APIs.
-</p>
+<header class="mb-8">
+	<h1 class="text-3xl font-extrabold text-base-content">Tyrone Cloma</h1>
+	<h2 class="text-lg text-neutral">Full Stack Developer</h2>
+</header>
 
-<p class="mb-8 text-base-content">
-	A self-starter that possesses strong skills in collaboration, resourcefulness,
-	and an eagerness to learn that helps companies create innovative solutions for
-	their clients.
-</p>
+<article class="mb-8 flex flex-col gap-8 text-base-content">
+	<p>
+		Full Stack Developer with a passion for creating efficient and engaging
+		applications. Experienced in JavaScript with React for creating responsive
+		user interfaces, and Ruby on Rails for producing RESTful APIs.
+	</p>
 
-<div>
-	<button
-		class="btn-md btn rounded-md border-none bg-neutral text-neutral-content normal-case"
-		>LinkedIn</button
-	>
-	<button
-		class="btn-md btn rounded-md border-none bg-neutral text-neutral-content normal-case"
-		>GitHub</button
-	>
-</div>
+	<p>
+		A self-starter that possesses strong skills in collaboration,
+		resourcefulness, and an eagerness to learn that helps companies create
+		innovative solutions for their clients.
+	</p>
+</article>
+
+<footer>
+	<LinkBtn
+		client:load
+		name="LinkedIn"
+		link="https://www.linkedin.com/in/tyronecloma/"
+	/>
+	<LinkBtn client:load name="GitHub" link="https://github.com/tcloma" />
+	<LinkBtn client:load name="Resume" link="/data/Tyrone_Cloma_Resume.pdf" />
+</footer>
