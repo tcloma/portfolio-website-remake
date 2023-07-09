@@ -18,7 +18,7 @@ const { name, githubUrl, technologies, src } = Astro.props
 	<Image
 		src={src}
 		alt={`${name} preview`}
-		class="rounded-xl border-2 max-h-[22rem] border-neutral shadow-inner"
+		class="max-h-[22rem] rounded-xl shadow-inner"
 	/>
 
 	<div class="flex h-12 w-[98%] rounded-bl-xl rounded-br-xl bg-base-200">
@@ -32,15 +32,22 @@ const { name, githubUrl, technologies, src } = Astro.props
 		>
 			{
 				technologies.map((tech) => (
-					<Icon name={`mdi:${tech}`} class="h-6 w-6 text-neutral hover:-translate-y-2 duration-200" />
+					<Icon
+						name={`mdi:${tech}`}
+						class="h-6 w-6 text-neutral duration-200 hover:-translate-y-2"
+					/>
 				))
 			}
 		</div>
-		<div
-			class="btn-ghost btn w-1/4 rounded-bl-none rounded-tl-none rounded-tr-none hover:btn-neutral"
-		>
-			<Icon name="mdi:github" class="h-6 w-6" />
-			<LinkBtn client:visible name="GitHub" link={githubUrl} />
+		<div class="w-1/4 rounded-bl-none rounded-tl-none rounded-tr-none">
+			<LinkBtn
+				client:visible
+				name="GitHub"
+				link={githubUrl}
+				styles="btn btn-ghost normal-case rounded-bl-none rounded-tl-none rounded-tr-none hover:btn-neutral rounded-br-xl"
+			>
+				<Icon name="mdi:github" class="h-6 w-6" />
+			</LinkBtn>
 		</div>
 	</div>
 </div>
