@@ -6,8 +6,6 @@ export interface Props {
 const { name } = Astro.props
 const url = Astro.url.pathname
 
-console.log(url.split('/'))
-
 function isOnPathName() {
 	if (url.endsWith('/')) {
 		return name == 'home'
@@ -18,7 +16,7 @@ function isOnPathName() {
 ---
 
 <a
-	href={name == 'home' ? '/' : name}
+	href={name == 'home' ? '/' : `/${name}`}
 	class={isOnPathName()
 		? 'btn btn-neutral text-neutral-content w-1/3'
 		: 'btn hover:btn-outline hover:border-2 w-1/3'}
