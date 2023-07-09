@@ -32,7 +32,7 @@ const { name, githubUrl, technologies, src } = Astro.props
 		>
 			{
 				technologies.map((tech) => (
-					<Icon name={`mdi:${tech}`} class="h-6 w-6 text-neutral" />
+					<Icon name={`mdi:${tech}`} class="h-6 w-6 text-neutral hover:-translate-y-2 duration-200" />
 				))
 			}
 		</div>

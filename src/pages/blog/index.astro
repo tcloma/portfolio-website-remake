@@ -7,7 +7,7 @@ const blogPosts = await getCollection('blog')
 ---
 
 <Layout title="Blog">
-	<ul>
+	<ul class="flex flex-col w-full">
 		{
 			blogPosts.map((post) => (
 				<BlogItem title={post.data.title} slug={post.slug} />
