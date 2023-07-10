@@ -8,7 +8,7 @@ interface Props {
 export default function LinkBtn({ name, link, children, styles }: Props) {
 	return (
 		<button
-			className={`flex h-full w-full items-center justify-center ${styles}`}
+			className={`btn flex border-none duration-200 items-center justify-center normal-case ${styles}`}
 			onClick={() => {
 				window.open(link)
 			}}

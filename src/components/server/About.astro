@@ -1,5 +1,6 @@
 ---
 import LinkBtn from '../client/LinkBtn'
+import { Icon } from 'astro-icon'
 ---
 
 <header class="mb-8">
@@ -7,7 +8,7 @@ import LinkBtn from '../client/LinkBtn'
 	<h2 class="text-lg text-neutral">Full Stack Developer</h2>
 </header>
 
-<article class="mb-8 flex flex-col gap-8 text-base-content tracking-tight">
+<article class="mb-8 flex flex-col gap-8 tracking-tight text-base-content">
 	<p>
 		Full Stack Developer with a passion for creating efficient and engaging
 		applications. Experienced in JavaScript with React for creating responsive
@@ -21,12 +22,29 @@ import LinkBtn from '../client/LinkBtn'
 	</p>
 </article>
 
-<footer>
+<footer class="flex gap-2">
 	<LinkBtn
 		client:load
 		name="LinkedIn"
+		styles="btn-sm bg-[#0077b5] text-white hover:scale-105"
 		link="https://www.linkedin.com/in/tyronecloma/"
-	/>
-	<LinkBtn client:load name="GitHub" link="https://github.com/tcloma" />
-	<LinkBtn client:load name="Resume" link="/data/Tyrone_Cloma_Resume.pdf" />
+	>
+		<Icon name="mdi:linkedin" class="h-6 w-6" />
+	</LinkBtn>
+	<LinkBtn
+		client:load
+		name="GitHub"
+		styles="btn-sm bg-[#333] text-white hover:scale-105"
+		link="https://github.com/tcloma"
+	>
+		<Icon name="mdi:github" class="h-6 w-6" />
+	</LinkBtn>
+	<LinkBtn
+		client:load
+		name="Resume"
+		styles="btn-sm hover:scale-105"
+		link="/data/Tyrone_Cloma_Resume.pdf"
+	>
+		<Icon name="fe:document" class="h-6 w-6" />
+	</LinkBtn>
 </footer>
