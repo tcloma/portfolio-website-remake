@@ -1,11 +1,15 @@
 type Props = {
 	type: string
 	name: string
+	styles?: string
 }
 
-import { ForwardedRef, forwardRef } from "react"
+import { ForwardedRef, forwardRef } from 'react'
 
-const InputField = forwardRef(function InputField({ type, name }: Props, ref: ForwardedRef<any>) {
+const InputField = forwardRef(function InputField(
+	{ type, name, styles }: Props,
+	ref: ForwardedRef<any>
+) {
 	return (
 		<div className="form-control">
 			<label className="label" htmlFor={name}>
@@ -13,18 +17,18 @@ const InputField = forwardRef(function InputField({ type, name }: Props, ref: Fo
 			</label>
 			{type == 'area' ? (
 				<textarea
-					className="textarea border-2 border-neutral"
+					className={'textarea w-full border-2 border-neutral ' + styles}
 					name={name}
 					placeholder="Type here..."
-                    ref={ref}
+					ref={ref}
 				/>
 			) : (
 				<input
-					className="input border-2 border-neutral"
+					className={'input w-full border-2 border-neutral ' + styles}
 					type={type}
 					name={name}
 					placeholder="Type here..."
-                    ref={ref}
+					ref={ref}
 				/>
 			)}
 		</div>
